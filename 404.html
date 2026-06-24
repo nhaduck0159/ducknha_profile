@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="amber" data-color-scheme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="404 Not Found - Nguyen Hong Anh Duc Profile">
+  <title>404 Not Found - Nguyễn Hồng Anh Đức</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/logo-CHXVUlbT.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables matching the original profile theme */
+    :root, [data-theme=amber] {
+      --primary-hue: 45;
+      --primary-saturation: 100%;
+      --primary-lightness: 72%;
+      --primary: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+      --primary-rgb: 255, 212, 112;
+      --primary-gradient: linear-gradient(to right, #ffdb70, #ffbb5c);
+      --orange-yellow-crayola: #ffdb70;
+      --vegas-gold: #ceb15a;
+    }
+    [data-theme=amethyst] {
+      --primary-hue: 280;
+      --primary-saturation: 100%;
+      --primary-lightness: 74%;
+      --primary: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+      --primary-rgb: 228, 122, 255;
+      --primary-gradient: linear-gradient(to right, #d37aff, #925cff);
+      --orange-yellow-crayola: #d37aff;
+      --vegas-gold: #ab62d0;
+    }
+    [data-theme=ocean] {
+      --primary-hue: 190;
+      --primary-saturation: 100%;
+      --primary-lightness: 50%;
+      --primary: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+      --primary-rgb: 0, 221, 255;
+      --primary-gradient: linear-gradient(to right, #00d4ff, #0095ff);
+      --orange-yellow-crayola: #00d4ff;
+      --vegas-gold: #359cb1;
+    }
+    [data-theme=emerald] {
+      --primary-hue: 145;
+      --primary-saturation: 100%;
+      --primary-lightness: 55%;
+      --primary: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+      --primary-rgb: 26, 255, 140;
+      --primary-gradient: linear-gradient(to right, #1aff79, #0fa);
+      --orange-yellow-crayola: #1aff79;
+      --vegas-gold: #35b168;
+    }
+
+    :root {
+      --bg-gradient-onyx: linear-gradient(to bottom right, #3f3f40 3%, #303030 97%);
+      --bg-gradient-jet: linear-gradient(to bottom right, #2d2d2e40 0%, #1b1b1d00 100%), #202022;
+      --border-gradient-onyx: linear-gradient(to bottom right, #404040 0%, #40404000 50%);
+      --jet: #383838;
+      --onyx: #2b2b2c;
+      --eerie-black-1: #202022;
+      --eerie-black-2: #1e1e1f;
+      --smoky-black: #121212;
+      --white-1: #fff;
+      --white-2: #fafafa;
+      --light-gray: #d6d6d6;
+      --light-gray-70: #d6d6d6b3;
+      
+      --ff-poppins: "Plus Jakarta Sans", sans-serif;
+      --ff-heading: "Outfit", sans-serif;
+      --fs-1: 24px;
+      --fs-2: 18px;
+      --fs-3: 17px;
+      --fs-4: 16px;
+      --fs-5: 15px;
+      --fs-6: 14px;
+      --fs-7: 13px;
+      --fs-8: 11px;
+      --fw-300: 300;
+      --fw-400: 400;
+      --fw-500: 500;
+      --fw-600: 600;
+      --shadow-1: -4px 8px 24px #00000040;
+      --shadow-2: 0 16px 30px #00000040;
+      --shadow-3: 0 16px 40px #00000040;
+      --shadow-4: 0 25px 50px #00000026;
+      --shadow-5: 0 24px 80px #00000040;
+      --transition-1: .25s ease;
+      --transition-2: .5s cubic-bezier(.25, 1, .5, 1);
+    }
+
+    [data-color-scheme=light] {
+      --jet: #dcdfe5;
+      --onyx: #eaecf1;
+      --eerie-black-1: #f0f1f5;
+      --eerie-black-2: #edeff3;
+      --smoky-black: #f8f9fb;
+      --white-1: #1a1d23;
+      --white-2: #2b303b;
+      --light-gray: #4f5664;
+      --light-gray-70: #4f5664bf;
+      --bg-gradient-onyx: linear-gradient(to bottom right, #f0f1f5 3%, #e3e7ed 97%);
+      --bg-gradient-jet: linear-gradient(to bottom right, #f6f7f9bf 0%, #eaecf159 100%), #f0f1f5;
+      --border-gradient-onyx: linear-gradient(to bottom right, #00000014 0%, #00000005 50%);
+      --orange-yellow-crayola: hsl(var(--primary-hue), 85%, 28%) !important;
+      --vegas-gold: hsl(var(--primary-hue), 60%, 35%) !important;
+      --primary: hsl(var(--primary-hue), 85%, 28%) !important;
+      --primary-gradient: linear-gradient(to right, hsl(var(--primary-hue), 85%, 28%), hsl(var(--primary-hue), 60%, 35%));
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+      font-family: var(--ff-poppins) !important;
+      background-color: #08090c !important;
+      background-image: radial-gradient(#ffffff03 1px, #0000 1px) !important;
+      background-size: 24px 24px !important;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--white-2);
+      transition: background-color 0.3s;
+    }
+
+    [data-color-scheme=light] body {
+      background-color: #f3f5f9 !important;
+      background-image: radial-gradient(#00000006 1px, #0000 1px) !important;
+    }
+
+    /* Ambient background gradients */
+    .ambient-glow {
+      filter: blur(130px);
+      opacity: .12;
+      pointer-events: none;
+      z-index: -2;
+      will-change: transform;
+      backface-visibility: hidden;
+      border-radius: 50%;
+      transition: background .8s, transform 1s;
+      position: fixed;
+      transform: translate(0,0);
+    }
+    
+    [data-color-scheme=light] .ambient-glow {
+      opacity: .08;
+    }
+
+    .glow-1 {
+      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+      width: 45vw;
+      height: 45vw;
+      animation: 25s infinite alternate drift-slow;
+      top: -10vw;
+      left: -10vw;
+    }
+
+    .glow-2 {
+      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+      width: 40vw;
+      height: 40vw;
+      animation: 30s infinite alternate drift-slower;
+      bottom: -10vw;
+      right: -10vw;
+    }
+
+    .glow-3 {
+      background: radial-gradient(circle, var(--primary) 0%, transparent 75%);
+      width: 30vw;
+      height: 30vw;
+      animation: 20s infinite alternate drift-medium;
+      top: 30vh;
+      left: 45vw;
+    }
+
+    @keyframes drift-slow {
+      0% { transform: translate(0) scale(1); }
+      100% { transform: translate(6vw, 4vw) scale(1.1); }
+    }
+
+    @keyframes drift-slower {
+      0% { transform: translate(0) scale(1.1); }
+      100% { transform: translate(-4vw, -6vw) scale(.95); }
+    }
+
+    @keyframes drift-medium {
+      0% { transform: translate(0) scale(.9); }
+      100% { transform: translate(-3vw, 5vw) scale(1.05); }
+    }
+
+    /* Container Box style matching Sidebar / Articles */
+    .error-card {
+      -webkit-backdrop-filter: blur(25px) saturate(220%) !important;
+      backdrop-filter: blur(25px) saturate(220%) !important;
+      background: #0e0f1473 !important;
+      border: 1px solid #ffffff1f !important;
+      box-shadow: 0 25px 50px #00000060, inset 0 1px #ffffff26 !important;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: 0.6s cubic-bezier(.16, 1, .3, 1) forwards slideUpFade;
+      transform: translateY(20px);
+    }
+
+    [data-color-scheme=light] .error-card {
+      background: #ffffff99 !important;
+      border: 1px solid #ffffff80 !important;
+      box-shadow: 0 20px 40px #0000000f, inset 0 1px #ffffffcc !important;
+    }
+
+    /* Hover shine effect */
+    .error-card::after {
+      content: "";
+      pointer-events: none;
+      z-index: 5;
+      background: linear-gradient(90deg, #0000 0%, #ffffff08 30%, #ffffff2e 50%, #ffffff08 70%, #0000 100%);
+      width: 50%;
+      height: 100%;
+      transition: none;
+      position: absolute;
+      top: 0;
+      left: -150%;
+      transform: skew(-25deg);
+    }
+
+    .error-card:hover::after {
+      transition: left 1.2s cubic-bezier(.16, 1, .3, 1);
+      left: 150%;
+    }
+
+    .error-card {
+      transition: transform .4s cubic-bezier(.16, 1, .3, 1), border-color .4s, box-shadow .4s !important;
+    }
+
+    .error-card:hover {
+      border-color: rgba(var(--primary-rgb), .3) !important;
+      box-shadow: 0 15px 30px #00000060, 0 0 20px rgba(var(--primary-rgb), .08), inset 0 1px 0 #ffffff1a !important;
+      transform: translateY(-6px) !important;
+    }
+    
+    [data-color-scheme=light] .error-card:hover {
+      border-color: rgba(var(--primary-rgb), .3) !important;
+      box-shadow: 0 15px 30px #0000000d, 0 0 20px rgba(var(--primary-rgb), .06), inset 0 1px 0 #ffffff80 !important;
+      transform: translateY(-6px) !important;
+    }
+
+    @keyframes slideUpFade {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Typography */
+    .error-code {
+      font-family: var(--ff-heading);
+      font-size: 110px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(var(--primary-rgb), 0.2));
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .error-title {
+      font-family: var(--ff-heading);
+      font-size: var(--fs-1);
+      color: var(--white-1);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+      text-transform: capitalize;
+    }
+
+    @media (min-width: 580px) {
+      .error-title {
+        font-size: 28px;
+      }
+    }
+
+    .error-title::after {
+      content: "";
+      background: var(--primary-gradient);
+      border-radius: 3px;
+      width: 45px;
+      height: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .error-desc {
+      color: var(--light-gray);
+      font-size: 15px;
+      font-weight: var(--fw-300);
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    /* Button exactly matching .form-btn / .info_more-btn */
+    .home-btn {
+      -webkit-backdrop-filter: blur(12px) !important;
+      backdrop-filter: blur(12px) !important;
+      color: var(--primary) !important;
+      background: #ffffff0a !important;
+      border: 1px solid #ffffff14 !important;
+      transition: all .35s cubic-bezier(.16,1,.3,1) !important;
+      box-shadow: 0 4px 15px #00000030, inset 0 1px #ffffff14 !important;
+      border-radius: 14px !important;
+      padding: 14px 24px !important;
+      font-family: var(--ff-poppins);
+      font-size: 15px;
+      font-weight: var(--fw-500);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      margin: 0 auto;
+      max-width: max-content;
+    }
+
+    [data-color-scheme=light] .home-btn {
+      background: #00000005 !important;
+      border: 1px solid #0000000f !important;
+      box-shadow: 0 4px 15px #0000000a, inset 0 1px #ffffff80 !important;
+    }
+
+    .home-btn ion-icon {
+      font-size: 18px;
+      --ionicon-stroke-width: 40px;
+    }
+
+    .home-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(var(--primary-rgb), .15) !important;
+      border-color: rgba(var(--primary-rgb), .4) !important;
+      box-shadow: 0 8px 25px rgba(var(--primary-rgb), .2), inset 0 1px 0 #ffffff26 !important;
+      color: var(--white-1) !important;
+    }
+
+    [data-color-scheme=light] .home-btn:hover {
+      color: var(--primary) !important;
+      background: rgba(var(--primary-rgb), .1) !important;
+      border-color: rgba(var(--primary-rgb), .3) !important;
+      box-shadow: 0 8px 25px rgba(var(--primary-rgb), .1), inset 0 1px 0 #ffffff80 !important;
+    }
+  </style>
+
+  <!-- Theme Script: runs early to prevent visual flashing -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('vcard-theme') || 'amber';
+      const scheme = localStorage.getItem('vcard-scheme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-color-scheme', scheme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Ambient background gradients -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <main>
+    <div class="error-card">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      
+      <p class="error-desc">
+        The page you are looking for does not exist, has been removed, or is temporarily unavailable.<br>
+        Trang bạn đang tìm kiếm không tồn tại, đã bị xóa hoặc tạm thời không khả dụng.
+      </p>
+
+      <a href="/" class="home-btn">
+        <ion-icon name="home-outline"></ion-icon>
+        <span>Trở về Trang chủ / Back to Home</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Dynamic storage change listener to sync themes instantly if changed in settings in another tab -->
+  <script>
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'vcard-theme') {
+        document.documentElement.setAttribute('data-theme', e.newValue || 'amber');
+      }
+      if (e.key === 'vcard-scheme') {
+        document.documentElement.setAttribute('data-color-scheme', e.newValue || 'dark');
+      }
+    });
+  </script>
+</body>
+
+</html>
